@@ -24,26 +24,11 @@
 
 @implementation PTEConsoleTableView
 
-- (instancetype)initWithFrame:(CGRect)frame
-                        style:(UITableViewStyle)style
+- (void)awakeFromNib
 {
-    self = [super initWithFrame:frame
-                          style:style];
-    if (self)
-    {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self)
-    {
-        [self commonInit];
-    }
-    return self;
+    [super awakeFromNib];
+    
+    [self commonInit];
 }
 
 - (void)commonInit
